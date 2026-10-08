@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "metodologia-workspace": {
+      "source": {
+        "source": "github",
+        "repo": "deviwieai/metodologia-workspace"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "metodo@metodologia-workspace": true
+  }
+}

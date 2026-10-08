@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Archivos donde todos agregan líneas al final: si dos personas agregan a la vez, Git conserva ambas
+registro/errores.csv merge=union
+contexto/decisiones.md merge=union

@@ -1,0 +1,15 @@
+# Personal de cada equipo: no se sube
+CLAUDE.local.md
+.claude/settings.local.json
+equipo/*/revision/
+
+# Secretos
+.env
+.env.*
+*.pem
+*.key
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
