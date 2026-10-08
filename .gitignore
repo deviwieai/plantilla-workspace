@@ -3,6 +3,10 @@ CLAUDE.local.md
 .claude/settings.local.json
 equipo/*/revision/
 
+# Material en bruto para /metodo:contexto: puede traer datos sensibles y archivos pesados
+contexto/entrada/*
+!contexto/entrada/.gitkeep
+
 # Secretos
 .env
 .env.*

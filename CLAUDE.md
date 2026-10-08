@@ -5,7 +5,9 @@
 ## Mapa
 
 - `contexto/proyecto.md`: cliente, objetivos, alcance, glosario y marca. Léelo solo si la tarea lo requiere.
+- `contexto/detalle/`: material de referencia por tema. Lee solo el archivo que la tarea necesite; el índice está al final de `contexto/proyecto.md`.
 - `contexto/decisiones.md`: decisiones tomadas. Solo se agregan líneas al final.
+- `contexto/entrada/`: material en bruto sin procesar. No lo leas salvo con `/metodo:contexto`.
 - `gobernanza/roles.md`: quién responde por cada área.
 - `equipo/<persona>/`: perfil y bitácora de cada persona.
 - `registro/errores.csv`: registro de errores de uso de IA.

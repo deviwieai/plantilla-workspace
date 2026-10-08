@@ -6,7 +6,7 @@ Esqueleto de un proyecto que se trabaja con Claude siguiendo la metodología de 
 
 1. En GitHub, abre `plantilla-workspace`, pulsa "Use this template" y crea un repositorio privado con el nombre del proyecto.
 2. Clónalo y ábrelo en Claude Code.
-3. Llena `CLAUDE.md` (nombre y resumen), `contexto/proyecto.md` y `gobernanza/roles.md`.
+3. Carga el contexto. Copia en `contexto/entrada/` todo lo que tengas sobre el proyecto y el cliente, sin ordenar (documentos, notas, correos exportados, transcripciones, planillas), y escribe `/metodo:contexto`. El comando lee todo, te propone qué va en cada archivo, te pregunta lo que se contradice o falta y, con tu aprobación, deja llenos `CLAUDE.md`, `contexto/proyecto.md` y `gobernanza/roles.md`. También acepta una ruta: `/metodo:contexto C:\ruta\a\mi\carpeta`.
 4. En Notion, dentro de "Proyectos", duplica la página "Plantilla de proyecto" y ponle el nombre del proyecto. Agrega los nombres del equipo al campo Responsable y las áreas al campo Área, en las dos bases.
 5. Copia en `CLAUDE.md`, sección Notion, las direcciones `collection://` de las bases Tareas y Entregables del proyecto. Claude las entrega si le pides "busca las bases de datos de la página <nombre> en Notion".
 6. Sube los cambios y avisa al equipo.
@@ -32,6 +32,7 @@ Si el plugin no aparece, instálalo a mano dentro de la sesión:
 |---|---|---|
 | Al empezar | `/metodo:inicio` | Baja los cambios del equipo y muestra dónde quedaste y tus tareas |
 | Al detectar un error de la IA | `/metodo:error` | Lo registra en un minuto |
+| Cuando llega material nuevo del cliente | `/metodo:contexto` | Procesa lo que haya en `contexto/entrada/` y actualiza el contexto |
 | Al terminar | `/metodo:cierre` | Escribe tu bitácora, actualiza tus tareas y sube todo |
 
 ## Dónde va cada cosa
@@ -44,7 +45,8 @@ Si el plugin no aparece, instálalo a mano dentro de la sesión:
 | Bitácora y perfil | `equipo/<persona>/` | Solo su dueño |
 | Decisiones | `contexto/decisiones.md` | Todos, agregando al final |
 | Errores de uso de IA | `registro/errores.csv` | Todos, con `/metodo:error` |
-| Contexto y roles | `contexto/proyecto.md`, `gobernanza/roles.md`, `CLAUDE.md` | Quien administra el proyecto |
+| Contexto y roles | `contexto/proyecto.md`, `contexto/detalle/`, `gobernanza/roles.md`, `CLAUDE.md` | Quien administra el proyecto |
+| Material en bruto | `contexto/entrada/` | Quien lo aporta; no se sube |
 | Preferencias personales | `CLAUDE.local.md` | Su dueño; no se sube |
 
 ## Cómo gastar menos tokens
